@@ -139,7 +139,7 @@ class wechat
 	{
 		$msgType='text';
 		/* 管理 */
-		if(strstr($keyword, '管理')){
+		if(strstr($keyword, '管理')||strstr($keyword, 'gaunli')||strstr($keyword, '惯例')||strstr($keyword, '官吏')||strstr($keyword, '观礼')){
 			$newsTpl="<xml>
 					 <ToUserName><![CDATA[%s]]></ToUserName>
 					 <FromUserName><![CDATA[%s]]></FromUserName>
@@ -164,7 +164,7 @@ class wechat
 		}
 		
 		/* 邮件确认 */
-		if(strstr($keyword, '邮件'))
+		if(strstr($keyword, '邮件')||strstr($keyword, '妖精')||strstr($keyword, 'youjian')||strstr($keyword, '右键')||strstr($keyword, '又见')||strstr($keyword, '右肩')||strstr($keyword, '诱奸'))
 		{
 			$link=mysql_connect("localhost","root","dHIoPOi7Ej3n");
 			mysql_select_db("app_wcjdemo",$link);    //选择数据库
@@ -181,7 +181,7 @@ class wechat
 		}
 		
 		/* 温度 */
-		else if(strstr($keyword,'温度')){
+		else if(strstr($keyword,'温度')||strstr($keyword, 'wendu')||strstr($keyword, '文都')||strstr($keyword, '文牍')){
 			$link=mysql_connect("localhost","root","dHIoPOi7Ej3n");
 			mysql_select_db("app_wcjdemo",$link);    //选择数据库
 	
@@ -201,7 +201,7 @@ class wechat
 		}
 	
 		/* 湿度 */
-		else if(strstr($keyword,'湿度')){
+		else if(strstr($keyword,'湿度')||strstr($keyword, 'shidu')||strstr($keyword, '适度')||strstr($keyword, '十度')||strstr($keyword, '尸毒')||strstr($keyword, '试读')){
 			$link=mysql_connect("localhost","root","dHIoPOi7Ej3n");
 			mysql_select_db("app_wcjdemo",$link);    //选择数据库
 	
@@ -221,7 +221,7 @@ class wechat
 		}
 	
 		/* 开灯 */
-		else if(strstr($keyword,'开灯')){
+		else if(strstr($keyword,'开灯')||strstr($keyword, 'kaideng')){
 			$link=mysql_connect("localhost","root","dHIoPOi7Ej3n");
 			mysql_select_db("app_wcjdemo",$link);    //选择数据库
 	
@@ -256,7 +256,7 @@ class wechat
 		}
 	
 		/* 关灯 */
-		else if(strstr($keyword,'关灯')){
+		else if(strstr($keyword,'关灯')||strstr($keyword, 'guandeng')||strstr($keyword, '观灯')){
 			$link=mysql_connect("localhost","root","dHIoPOi7Ej3n");
 			mysql_select_db("app_wcjdemo",$link);    //选择数据库
 	
@@ -291,7 +291,7 @@ class wechat
 		}
 	
 		/* 查看窗户是否有人 */
-		else if(strstr($keyword,'安全')){
+		else if(strstr($keyword,'安全')||strstr($keyword, 'anquan')){
 			$link=mysql_connect("localhost","root","dHIoPOi7Ej3n");
 			mysql_select_db("app_wcjdemo",$link);    //选择数据库
 	
